@@ -730,6 +730,14 @@ footer {
    footer {
       display: none;
    }
+
+   .navigation-icon {
+      display: none;
+   }
+
+   .input-area {
+      margin-left: 0;
+   }
 }
 
 @media (min-width: 600px) and (max-width: 755px){

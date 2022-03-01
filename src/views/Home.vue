@@ -60,7 +60,6 @@
       async created(){
          await axios.get('http://zmdp.cloud/iseAlim/spotify.json')
             .then(response => {
-               console.log(response);
                this.allData = response?.data || [];
             });
       }

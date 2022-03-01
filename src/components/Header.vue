@@ -57,13 +57,11 @@
       },
       methods: {
          filterData(){
-            console.log('CURRENT KEYWORD => ', this.keyword.trim().toLowerCase().replace(/\s/g, ''));
             this.allNames.forEach(name => {
                if(name.toLowerCase().replace(/\s/g, '').indexOf(this.keyword.trim().toLowerCase().replace(/\s/g, '')) > -1 && this.keyword.trim() != ''){
                   this.filteredList.push(name)
                }
             });
-            console.log('BEFORE EMITED ', this.filteredList);
 
             this.$emit('keyword', this.keyword.trim());
             this.$emit('filteredList', this.filteredList)
@@ -78,7 +76,6 @@
       async created(){
          await axios.get('http://zmdp.cloud/iseAlim/spotify.json')
             .then(response => {
-               console.log(response.data.allPlaylists, ' adasdasa');
                response.data.allPlaylists.forEach(playlist => {
                   this.allNames.push(playlist.name);
                });

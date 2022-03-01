@@ -59,7 +59,6 @@
       async created(){
          this.id = this._getCurrentPlaylist.id;
          this.img = this._getCurrentPlaylist.images?.[0].url || '#';
-         console.log(this.img)
          this.currentPlaylist = this._getCurrentPlaylist
       },
       computed: {

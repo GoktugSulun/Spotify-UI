@@ -35,9 +35,6 @@
       components: {
          Card,
       },
-      created(){
-         console.log(this.playlist, ' playlsit')
-      }
    }
 </script>
 

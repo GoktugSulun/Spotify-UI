@@ -120,8 +120,6 @@
             const showInput = target == 'Search';
             this.$store.commit('setShowInput', showInput);
 
-            console.log('Target ', target);
-
             this.$store.commit('setActiveClass', target);
             this.$router.push({ name: `${target}Page`});
 
